@@ -2,9 +2,9 @@
 
 ### Coding Assignment
 
-Description
+Description of the coding
 
-See the page in action here
+See the page in action here (add URL)
 
 
 ```markdown
