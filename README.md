@@ -1,10 +1,8 @@
 #Background and Interests
-Here is where I’ll put an introduction that tells people about who I am, what I’m studying, and what my goals are for the future.
+I am currently a senior at The George Washington University studying Communication and Journalism. After I finish my undergraduate degree in the next few weeks, I am hoping to be admitted to Northwestern's Sports Journalism Masters program for Fall 2021. I am eager to apply the data journalism expertise I have developed over this semester through this course in my future journalism endeveours involving sports. 
 
-You can make this section as brief or as expansive as you’d like, and if you want to can also include links to a resume or other accomplishments, though that is not necessary to complete this particular assignment.
-
-#White House Salaries
-This is an example of what a summary section would look like. Here is a project that took White House salary data and created a dashboard to compare who got the highest raises.
+#White House Salaries 
+Here is a project from an assignment this semester that took White House salary data and created a dashboard to compare who got the highest raises.
 
 See the page in action here.
 
