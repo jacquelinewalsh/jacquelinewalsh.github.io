@@ -140,8 +140,6 @@ agencycount_compare %>%
 
 Show the top 10 **largest** agency review teams as of today:
 
-```{r, echo=FALSE}
-
 agencycount_compare %>%
   select(agency,current) %>%
   arrange(desc(current)) %>%
@@ -150,7 +148,6 @@ agencycount_compare %>%
   tab_options(table.align = "left")
 
 Show the top **smallest** agency review teams as of today - which we'll define here as less than five members:
-
 
 agencycount_compare %>%
   select(agency,current) %>%
