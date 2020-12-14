@@ -106,7 +106,7 @@ Come up with the necessary R code to return the following for the agency review 
 
 Below write code to show the new names added to the agency review team lists since the prior data provided.  
 
-```
+```markdown
 newnames %>% 
   select(agency, name, most_recent_employment, on_multiple_teams, team_lead) %>% 
   gt() %>%
@@ -124,7 +124,7 @@ newnames %>%
 
 Add data to show the total number of people appointed to each agency team, along with change since last time reflecting the number of new people added. Omit agencies with no change at all.
 
-```
+```markdown
 agencycount_compare %>%
   filter(change!=0) %>%
   gt() %>%
@@ -144,7 +144,7 @@ agencycount_compare %>%
 
 Show the top 10 **largest** agency review teams as of today:
 
-```
+```markdown
 agencycount_compare %>%
   select(agency,current) %>%
   arrange(desc(current)) %>%
@@ -155,7 +155,7 @@ agencycount_compare %>%
 
 Show the top **smallest** agency review teams as of today - which we'll define here as less than five members:
 
-```
+```markdown
 agencycount_compare %>%
   select(agency,current) %>%
   arrange(desc(current)) %>%
@@ -172,7 +172,7 @@ Come up with the necessary R code to return the following for the WH senior staf
 
 Below write code to show the new names added to the senior staff lists since the prior data provided. 
 
-```
+```markdown
 newnames_staff %>% 
   slect(name,title) %>%
   gt() %>%
@@ -186,7 +186,7 @@ newnames_staff %>%
 
 Add code to show the total number of people currently named to the WH senior staff, vs. the previous total number.  
 
-```
+```markdown
 #find current number of people
 num_staffcurrent <- staff_data_current %>%
   nrow()
@@ -203,4 +203,8 @@ df_staff <- data.frame("current_total" = num_staffcurrent,
 df_staff% %>%
   gt()
 ```{r, echo=FALSE}
+
+**Flexdashboard with this data**
+
+See [link](file:///Users/jacquelinewalsh/Desktop/JW%20GIT/jacquelinewalsh.github.io/Test.html)
 
