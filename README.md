@@ -105,9 +105,6 @@ Come up with the necessary R code to return the following for the agency review 
 ### *New Names*
 
 Below write code to show the new names added to the agency review team lists since the prior data provided.  
-  
-
-```{r, echo=FALSE}
 
 newnames %>% 
   select(agency, name, most_recent_employment, on_multiple_teams, team_lead) %>% 
@@ -120,14 +117,10 @@ newnames %>%
     align = "center",
     columns = vars(team_lead, on_multiple_teams)
   )
- 
-```
 
 ### *Aggregate Team Changes*
 
-Add data to show the total number of people appointed to each agency team, along with change since last time reflecting the number of new people added. Omit agencies with no change at all.  
-  
-```{r, echo=FALSE}
+Add data to show the total number of people appointed to each agency team, along with change since last time reflecting the number of new people added. Omit agencies with no change at all.
 
 agencycount_compare %>%
   filter(change!=0) %>%
@@ -142,8 +135,7 @@ agencycount_compare %>%
         columns = vars(change)
       )
   )
-```
-
+  
 ### *Largest and Smallest Overall*
 
 Show the top 10 **largest** agency review teams as of today:
@@ -157,12 +149,8 @@ agencycount_compare %>%
   gt() %>%
   tab_options(table.align = "left")
 
-
-```
-
 Show the top **smallest** agency review teams as of today - which we'll define here as less than five members:
 
-```{r, echo=FALSE}
 
 agencycount_compare %>%
   select(agency,current) %>%
@@ -170,9 +158,6 @@ agencycount_compare %>%
   head(5) %>%
   gt() %>%
   tab_options(table.align = "left")
- 
-
-```
 
 # WHITE HOUSE SENIOR STAFF
 
@@ -182,9 +167,6 @@ Come up with the necessary R code to return the following for the WH senior staf
 
 Below write code to show the new names added to the senior staff lists since the prior data provided.  
   
-
-```{r, echo=FALSE}
-
 newnames_staff %>% 
   slect(name,title) %>%
   gt() %>%
@@ -193,15 +175,10 @@ newnames_staff %>%
   ) %>%
   tab_options(table.align = "left")
 
-```
-
 ### *Total Number of Current vs. Previous*
 
 Add code to show the total number of people currently named to the WH senior staff, vs. the previous total number.  
   
-
-```{r, echo=FALSE}
-
 #find current number of people
 num_staffcurrent <- staff_data_current %>%
   nrow()
@@ -218,4 +195,5 @@ df_staff <- data.frame("current_total" = num_staffcurrent,
 df_staff% %>%
   gt()
 
-```
+```{r, echo=FALSE}
+
