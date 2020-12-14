@@ -82,6 +82,7 @@ impeach <-
 ```
 
 **Biden Transition Tracking**
+
 This project scraped the Biden Transition site and captured what was new, then generated a dynamic report that can be updated multiple times a day as necessary to share information on the status of the transition teams.
  
 ```markdown
@@ -89,9 +90,7 @@ AGENCY TEAMS
 
 Come up with the necessary R code to return the following for the agency review teams.
 
-*New Names*
-
-Below write code to show the new names added to the agency review team lists since the prior data provided.  
+**Below write code to show the new names added to the agency review team lists since the prior data provided.** 
 
 newnames %>% 
   select(agency, name, most_recent_employment, on_multiple_teams, team_lead) %>% 
@@ -105,9 +104,7 @@ newnames %>%
     columns = vars(team_lead, on_multiple_teams)
   )
 
-*Aggregate Team Changes*
-
-Add data to show the total number of people appointed to each agency team, along with change since last time reflecting the number of new people added. Omit agencies with no change at all.
+**Add data to show the total number of people appointed to each agency team, along with change since last time reflecting the number of new people added. Omit agencies with no change at all.**
 
 agencycount_compare %>%
   filter(change!=0) %>%
@@ -123,9 +120,7 @@ agencycount_compare %>%
       )
   )
 
-*Largest and Smallest Overall*
-
-Show the top 10 **largest** agency review teams as of today:
+**Show the top 10 largest agency review teams as of today:**
 
 agencycount_compare %>%
   select(agency,current) %>%
@@ -134,7 +129,7 @@ agencycount_compare %>%
   gt() %>%
   tab_options(table.align = "left")
 
-Show the top **smallest** agency review teams as of today - which we'll define here as less than five members:
+**Show the top smallest agency review teams as of today - which we'll define here as less than five members:**
 
 agencycount_compare %>%
   select(agency,current) %>%
@@ -147,9 +142,7 @@ WHITE HOUSE SENIOR STAFF
 
 Come up with the necessary R code to return the following for the WH senior staff.
 
-*New Names*
-
-Below write code to show the new names added to the senior staff lists since the prior data provided. 
+**Below write code to show the new names added to the senior staff lists since the prior data provided.** 
 
 newnames_staff %>% 
   slect(name,title) %>%
@@ -159,9 +152,7 @@ newnames_staff %>%
   ) %>%
   tab_options(table.align = "left")
 
-*Total Number of Current vs. Previous*
-
-Add code to show the total number of people currently named to the WH senior staff, vs. the previous total number.  
+**Add code to show the total number of people currently named to the WH senior staff, vs. the previous total number.**
 
 #find current number of people
 num_staffcurrent <- staff_data_current %>%
